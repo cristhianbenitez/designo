@@ -21,9 +21,14 @@
   max-width: $max-width; /* 1 */
   margin-left: auto; /* 2 */
   margin-right: auto; /* 2 */
-  padding-left: 20px; /* 3 */
-  padding-right: 20px; /* 3 */
+  padding-left: 40px; /* 3 */
+  padding-right: 40px; /* 3 */
   width: 100%; /* 1 */
+
+  @include media('<=phone') {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /**

@@ -1,3 +1,33 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+.header > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.header__logo {
+  max-width: 195px;
+}
+
+.header__navigation {
+}
+
+.header__navigation__list {
+  display: flex;
+  gap: 42px;
+
+  @include media('<=phone') {
+    display: none;
+  }
+}
+
+.header__navigation__list-item {
+}
+
+.header__navigation__list-item > a {
+  color: $text-color;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
