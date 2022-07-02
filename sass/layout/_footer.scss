@@ -1,2 +1,110 @@
-.button {
+.footer {
+  background: $black;
+  padding-top: 9rem;
+  padding-bottom: 4.5rem;
+
+  @include media('<=phone') {
+    padding-top: 16rem;
+    padding-bottom: 4rem;
+  }
+  @include media('>phone', '>=tablet') {
+    padding-top: 10.5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.footer__logo {
+  max-width: 197px;
+
+  @include media('<=phone') {
+    padding-bottom: 2rem;
+  }
+}
+
+.footer--top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px rgba(255, 255, 255, 0.1) solid;
+
+  @include media('<=phone') {
+    flex-direction: column;
+    border: none;
+  }
+}
+
+.footer__navigation {
+  @include media('<=phone') {
+    border-top: 1px rgba(255, 255, 255, 0.1) solid;
+    width: 100%;
+    padding-top: 2rem;
+  }
+}
+
+.footer__navigation-list {
+  display: flex;
+  gap: 42px;
+  @include media('<=phone') {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+}
+
+.footer__navigation-list-item {
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.footer--bottom-row {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  @include media('<=phone') {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer__location,
+.footer__contact-us {
+  display: flex;
+  flex-direction: column;
+  color: $white;
+  opacity: 0.5;
+
+  @include media('<=phone') {
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.footer__location {
+  & > span:first-child {
+    font-weight: 700;
+  }
+}
+
+.footer__contact-us {
+  font-weight: 700;
+  @include media('>tablet') {
+    margin-right: 220px;
+  }
+}
+
+.footer__social-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer__social-links__item {
+  &:hover,
+  &:focus {
+    & path {
+      fill: #ffad9b;
+    }
+  }
 }

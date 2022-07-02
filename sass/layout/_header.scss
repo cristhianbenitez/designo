@@ -4,13 +4,15 @@
   justify-content: space-between;
   padding-top: 4rem;
   padding-bottom: 4rem;
+
+  @include media('<=phone') {
+    padding-top: 2.125rem;
+    padding-bottom: 2.125rem;
+  }
 }
 
 .header__logo {
   max-width: 195px;
-}
-
-.header__navigation {
 }
 
 .header__navigation__list {
@@ -19,10 +21,35 @@
 
   @include media('<=phone') {
     display: none;
+    &.visible {
+      display: block;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: 96px;
+      animation: fadeIn 0.5s;
+      background: rgba(0, 0, 0, 0.5);
+      height: 100%;
+    }
   }
 }
 
 .header__navigation__list-item {
+  @include media('<=phone') {
+    padding-inline: 1.5rem 2rem;
+    background: #1d1c1e;
+
+    &:first-child {
+      padding-top: 3rem;
+    }
+    &:nth-child(2) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    &:last-child {
+      padding-bottom: 3rem;
+    }
+  }
 }
 
 .header__navigation__list-item > a {
@@ -30,4 +57,71 @@
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 2px;
+
+  @include media('<=phone') {
+    color: $white;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+}
+
+// Burger Button
+.header__navigation-burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+
+  @include media('>phone') {
+    display: none;
+  }
+}
+.header__navigation-burger-btn {
+  position: relative;
+  z-index: 3;
+  width: 28.5px;
+  height: 4px;
+  background: $text-color;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.header__navigation-burger-btn::before,
+.header__navigation-burger-btn::after {
+  content: '';
+  position: absolute;
+  width: 28.5px;
+  height: 4px;
+  background: $text-color;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+.header__navigation-burger-btn::before {
+  transform: translateY(-9px);
+}
+.header__navigation-burger-btn::after {
+  transform: translateY(9px);
+}
+.header__navigation-burger.open .header__navigation-burger-btn {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+.header__navigation-burger.open .header__navigation-burger-btn::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+.header__navigation-burger.open .header__navigation-burger-btn::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+// ANIMATION
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
