@@ -58,12 +58,17 @@
   font-size: 0.875rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-
+  text-decoration: none;
+  @include text-underline;
   @include media('<=650px') {
     color: $white;
     font-size: 1.5rem;
     letter-spacing: 2px;
   }
+}
+
+.header__navigation__list-item--active > a {
+  border-bottom: 1px solid $black;
 }
 
 // Burger Button

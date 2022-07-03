@@ -22,7 +22,19 @@ $(menuBtn).on('click', () => {
 barba.init({
   transitions: [
     {
-      name: 'opacity-transition',
+      name: 'default-transition',
+      beforeEnter({ current, next, trigger }) {
+        const headerLinks = $('.header__navigation__list-item');
+        const href = next.url.path;
+
+        headerLinks.each(() => {
+          if ($(this).attr('href') === href) {
+            $(this).addClass('.header__navigation__list--active');
+          } else {
+            $(this).removeClass('.header__navigation__list--active');
+          }
+        });
+      },
       leave(data) {
         return gsap.to(data.current.container, {
           opacity: 0

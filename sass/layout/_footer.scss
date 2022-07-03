@@ -122,10 +122,12 @@
   }
 }
 
-.footer__navigation-list-item {
+.footer__navigation-list-item a {
   color: $white;
   text-transform: uppercase;
   letter-spacing: 2px;
+  text-decoration: none;
+  @include text-underline($white);
   @include on-event {
     color: $white;
   }

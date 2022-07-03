@@ -9,7 +9,7 @@
     <title>Designo</title>
     <link rel="stylesheet" href="sass/main.css" />
   </head>
-  <body>
+  <body data-barba="wrapper">
     <img
       src="assets/shared/desktop/bg-pattern-leaf.svg"
       class="background-image-1 desktop-only"
@@ -20,11 +20,12 @@
     />
     <header class="header">
       <div class="container">
-        <img
-          src="assets/shared/desktop/logo-dark.png"
-          alt="designo-logo"
-          class="header__logo"
-        />
+        <a href="/">
+          <img
+            src="assets/shared/desktop/logo-dark.png"
+            alt="designo-logo"
+            class="header__logo"
+        /></a>
         <nav class="header__navigation">
           <ul class="header__navigation__list">
             <li class="header__navigation__list-item">
@@ -49,7 +50,7 @@
         </nav>
       </div>
     </header>
-    <main>
+    <main data-barba="container" data-barba-namespace="home">
       <section class="hero">
         <div class="container">
           <div class="hero__inner-container">
@@ -80,7 +81,7 @@
         <div class="container">
           <div class="work__inner-container">
             <div class="work__item">
-              <a href="" class="work__item-container">
+              <a href="web-design.html" class="work__item-container">
                 <h2 class="work__item-headline">Web Design</h2>
                 <span class="work__item-subtitle"
                   >View Projects
@@ -124,7 +125,6 @@
                 <img
                   class="our-process__item__image"
                   src="/assets/home/desktop/illustration-passionate.svg"
-                  alt=""
                 />
               </div>
               <div class="our-process__item__copy-container">
@@ -141,7 +141,6 @@
                 <img
                   class="our-process__item__image"
                   src="assets/home/desktop/illustration-resourceful.svg"
-                  alt=""
                 />
               </div>
               <div class="our-process__item__copy-container">
@@ -203,16 +202,14 @@
             />
             <nav class="footer__navigation">
               <ul class="footer__navigation-list">
-                <li>
-                  <a href="" class="footer__navigation-list-item"
-                    >Our company</a
-                  >
+                <li class="footer__navigation-list-item">
+                  <a href="">Our company</a>
                 </li>
-                <li>
-                  <a href="" class="footer__navigation-list-item">Locations</a>
+                <li class="footer__navigation-list-item">
+                  <a href="">Locations</a>
                 </li>
-                <li>
-                  <a href="" class="footer__navigation-list-item">Contact</a>
+                <li class="footer__navigation-list-item">
+                  <a href="">Contact</a>
                 </li>
               </ul>
             </nav>
