@@ -126,6 +126,9 @@
   color: $white;
   text-transform: uppercase;
   letter-spacing: 2px;
+  @include on-event {
+    color: $white;
+  }
 }
 
 .footer--bottom-row {

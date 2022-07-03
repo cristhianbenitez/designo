@@ -888,6 +888,10 @@ h3 {
   letter-spacing: 2px;
 }
 
+.footer__navigation-list-item:hover, .footer__navigation-list-item:active, .footer__navigation-list-item:focus {
+  color: white;
+}
+
 .footer--bottom-row {
   padding-top: 2rem;
   display: -webkit-box;
