@@ -10,7 +10,6 @@
   background-image: url('/assets/home/desktop/bg-pattern-hero-home.svg')
     no-repeat;
   background-position: 0 50%;
-
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -26,18 +25,17 @@
     background: $peach url('/assets/home/desktop/bg-pattern-hero-home.svg')
       no-repeat;
     background-position: 350% 50%;
-    padding-top: 3.75rem;
-    padding-inline: 3.625rem;
+    padding: 3.75rem 3.625rem;
   }
-  @include media('>=desktop') {
+  @include media('>tablet') {
+    background-position: right;
+  }
+  @include media('>1040px') {
     flex-direction: row;
     height: 640px;
     margin-bottom: 10rem;
-
     text-align: left;
-    padding-top: 9rem;
-    padding-bottom: 9rem;
-    padding-left: 3.5rem;
+    padding: 9rem 3.5rem;
   }
 }
 
@@ -55,17 +53,14 @@
   margin-bottom: 1rem;
 
   @include media('>=desktop') {
+    margin: 0;
     margin-bottom: 2.5rem;
   }
 }
 
 .hero__button {
+  @include button;
   display: inline-flex;
-  padding: 1rem 1.5rem;
-  color: #333136;
-  text-transform: uppercase;
-  background: $white;
-  border-radius: 8px;
 }
 
 .hero__image {
@@ -73,15 +68,18 @@
   left: 50%;
   bottom: -59.5%;
   transform: translate(-50%, -50%);
+
+  @include media('>desktop') {
+    right: 100px;
+    top: 140px;
+    left: unset;
+    bottom: unset;
+    transform: unset;
+  }
 }
 
 .hero__image-phone {
   filter: drop-shadow(20px -40px 50px rgba(93, 2, 2, 0.6));
-
-  @include media('>=tablet') {
-  }
-  @include media('>=desktop') {
-  }
 }
 
 // WORK
@@ -95,7 +93,7 @@
   gap: 24px;
   margin-bottom: 7.5rem;
 
-  @include media('>=tablet') {
+  @include media('>tablet') {
     height: 640px;
     grid-template-columns: 1fr 0.9fr;
     grid-template-rows: 1fr 1fr;
@@ -125,7 +123,7 @@
     background: url('/assets/home/desktop/image-graphic-design.jpg');
     background-size: cover;
   }
-  @include media('>=tablet') {
+  @include media('>tablet') {
     &:nth-child(1) {
       grid-row: 1 / span 2;
     }
@@ -221,82 +219,4 @@
 
 .our-process__item__headline {
   text-transform: uppercase;
-}
-
-// CALL TO ACTION
-
-.cta {
-  margin-bottom: -11.875rem;
-
-  @include media('>=desktop') {
-    margin-bottom: -4.5rem;
-  }
-}
-
-.cta__inner-container {
-  background-color: $peach;
-  border-radius: 1rem;
-  padding: 4rem 1.5rem;
-  position: relative;
-  overflow: hidden;
-  background-image: url(/assets/shared/desktop/bg-pattern-call-to-action.svg);
-  background-position: 45%;
-  background-repeat: no-repeat;
-  color: $white;
-
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: space-between;
-  align-items: center;
-
-  @include media('>=tablet') {
-    padding: 3.5rem;
-  }
-  @include media('>900px') {
-    padding: 4.5rem 6rem;
-    text-align: left;
-    flex-direction: row;
-    background-position: right;
-  }
-}
-
-.cta__copy-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 430px;
-  @include media('>=900px') {
-    align-items: flex-start;
-  }
-}
-
-.cta__button-container {
-}
-
-.cta__headline {
-  max-width: 270px;
-  font-size: 2rem;
-  margin: 0;
-  margin-bottom: 0.875rem;
-
-  @include media('>=tablet') {
-    font-size: 2.5rem;
-  }
-}
-
-.cta__copy {
-  margin: 0;
-  margin-bottom: 32px;
-}
-
-.cta__button {
-  display: block;
-  padding: 1.125rem;
-  background: $white;
-  border-radius: 0.5rem;
-  color: $black;
-  text-transform: uppercase;
-  font-weight: 500;
-  letter-spacing: 1px;
 }

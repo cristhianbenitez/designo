@@ -1,3 +1,71 @@
+// CALL TO ACTION
+
+.cta {
+  margin-bottom: -50%;
+
+  @include media('>phone') {
+    margin-bottom: -4.5rem;
+  }
+}
+
+.cta__inner-container {
+  background-color: $peach;
+  border-radius: 1rem;
+  padding: 4rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  background-image: url(/assets/shared/desktop/bg-pattern-call-to-action.svg);
+  background-position: 45%;
+  background-repeat: no-repeat;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+
+  @include media('>=tablet') {
+    padding: 3.5rem;
+  }
+  @include media('>900px') {
+    padding: 4.5rem 6rem;
+    text-align: left;
+    flex-direction: row;
+    background-position: right;
+  }
+}
+
+.cta__copy-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 430px;
+  @include media('>=900px') {
+    align-items: flex-start;
+  }
+}
+
+.cta__headline {
+  max-width: 270px;
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 0.875rem;
+
+  @include media('>=tablet') {
+    font-size: 2.5rem;
+  }
+}
+
+.cta__copy {
+  margin: 0;
+  margin-bottom: 32px;
+}
+
+.cta__button {
+  @include button;
+}
+
+// FOOTER
 .footer {
   background: $black;
   padding-top: 9rem;
@@ -7,7 +75,7 @@
     padding-top: 16rem;
     padding-bottom: 4rem;
   }
-  @include media('>phone', '>=tablet') {
+  @include media('>=tablet') {
     padding-top: 10.5rem;
     padding-bottom: 5rem;
   }
@@ -16,26 +84,26 @@
 .footer__logo {
   max-width: 197px;
 
-  @include media('<=phone') {
+  @include media('<tablet') {
     padding-bottom: 2rem;
   }
 }
 
 .footer--top-row {
   display: flex;
+  flex-direction: column;
+  border: none;
   align-items: center;
-  justify-content: space-between;
-  padding-bottom: 2.5rem;
-  border-bottom: 1px rgba(255, 255, 255, 0.1) solid;
-
-  @include media('<=phone') {
-    flex-direction: column;
-    border: none;
+  @include media('>=tablet') {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px rgba(255, 255, 255, 0.1) solid;
   }
 }
 
 .footer__navigation {
-  @include media('<=phone') {
+  @include media('<tablet') {
     border-top: 1px rgba(255, 255, 255, 0.1) solid;
     width: 100%;
     padding-top: 2rem;
@@ -45,9 +113,11 @@
 .footer__navigation-list {
   display: flex;
   gap: 42px;
-  @include media('<=phone') {
-    flex-direction: column;
-    align-items: center;
+  flex-direction: column;
+  align-items: center;
+
+  @include media('>=tablet') {
+    flex-direction: row;
     gap: 32px;
   }
 }
@@ -61,10 +131,12 @@
 .footer--bottom-row {
   padding-top: 2rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  @include media('<=phone') {
-    flex-direction: column;
-    align-items: center;
+
+  @include media('>=tablet') {
+    flex-direction: row;
   }
 }
 
@@ -74,10 +146,12 @@
   flex-direction: column;
   color: $white;
   opacity: 0.5;
+  align-items: center;
+  margin-bottom: 2.5rem;
 
-  @include media('<=phone') {
-    align-items: center;
-    margin-bottom: 2.5rem;
+  @include media('>tablet') {
+    // align-items: center;
+    margin-bottom: 0;
   }
 }
 
@@ -89,7 +163,7 @@
 
 .footer__contact-us {
   font-weight: 700;
-  @include media('>tablet') {
+  @include media('>1024px') {
     margin-right: 220px;
   }
 }
