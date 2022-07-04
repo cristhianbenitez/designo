@@ -1,0 +1,49 @@
+.sub-header {
+  background: $peach;
+  background-image: url(/assets/shared/mobile/bg-pattern-design-pages-intro-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  max-height: 320px;
+  margin-bottom: 6rem;
+
+  @include media('>phone') {
+    background: none;
+    max-height: 252px;
+    margin-bottom: 10rem;
+  }
+}
+
+.sub-header__inner-container {
+  color: $white;
+  padding-top: 6.5rem;
+  padding-bottom: 6.5rem;
+  text-align: center;
+
+  @include media('>phone') {
+    background: $peach;
+    border-radius: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.graphic-design-intro {
+  @include media('>phone') {
+    background-image: url(/assets/graphic-design/desktop/bg-pattern-intro-graphic.svg);
+    background-repeat: no-repeat;
+    background-position: -25% 50%;
+  }
+}
+
+.sub-header__headline {
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+.sub-header__copy {
+  margin: auto;
+  max-width: 400px;
+  @include media('<=phone') {
+    font-size: 15px;
+  }
+}

@@ -4,7 +4,7 @@ const menuList = $('.header__navigation__list');
 $(menuBtn).on('click', () => {
   menuBtn.toggleClass('open');
   menuList.toggleClass('visible');
-
+  // NO SCROLL ON OPEN MENU
   if ($('body').css('overflow') === 'hidden') {
     $('html, body').css({
       overflow: 'visible',
@@ -26,12 +26,12 @@ barba.init({
       beforeEnter({ current, next, trigger }) {
         const headerLinks = $('.header__navigation__list-item');
         const href = next.url.path;
-
-        headerLinks.each(() => {
-          if ($(this).attr('href') === href) {
-            $(this).addClass('.header__navigation__list--active');
+        const activeClass = 'header__navigation__list-item--active';
+        headerLinks.each((_, link) => {
+          if ($(link).children('a').attr('href') === href) {
+            $(link).addClass(activeClass);
           } else {
-            $(this).removeClass('.header__navigation__list--active');
+            $(link).removeClass(activeClass);
           }
         });
       },
