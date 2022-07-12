@@ -15,10 +15,7 @@
       src="assets/shared/desktop/bg-pattern-leaf.svg"
       class="background-image-1 desktop-only"
     />
-    <img
-      src="assets/shared/desktop/bg-pattern-leaf.svg"
-      class="background-image-2 desktop-only"
-    />
+
     <header class="header">
       <div class="container">
         <a href="/">
@@ -56,7 +53,7 @@
         <div class="container">
           <div class="locations__location">
             <div class="locations__location__content">
-              <h3 class="locations__location-country"></h3>
+              <h2 class="locations__location-country">Canada</h2>
               <div class="locations__location-contact">
                 <div class="locations__location-contact__address">
                   <b class="locations__location-contact__address-line">
@@ -81,17 +78,21 @@
               </div>
             </div>
             <div class="locations__location__map">
-              <img
-                src="assets/locations/desktop/image-map-canada.png"
-                alt="location map canada image"
-              />
+              <picture>
+                <source
+                  media="(max-width:1024px) and (min-width:500px)"
+                  srcset="assets/locations/tablet/image-map-canada.png"
+                />
+                <img
+                  src="assets/locations/desktop/image-map-canada.png"
+                  alt="location map canada image"
+                />
+              </picture>
             </div>
           </div>
-          <div class="locations__location">
-            <div
-              class="locations__location__content locatons__location__content--reversed"
-            >
-              <h3 class="locations__location-country">Australia</h3>
+          <div class="locations__location locations__location--reversed">
+            <div class="locations__location__content">
+              <h2 class="locations__location-country">Australia</h2>
               <div class="locations__location-contact">
                 <div class="locations__location-contact__address">
                   <b class="locations__location-contact__address-line"
@@ -116,42 +117,55 @@
               </div>
             </div>
             <div class="locations__location__map">
-              <img
-                src="assets/locations/desktop/image-map-australia.png"
-                alt="location map australia image "
-              />
+              <picture>
+                <source
+                  media="(max-width:1024px) and (min-width:500px)"
+                  srcset="assets/locations/tablet/image-map-australia.png"
+                />
+                <img
+                  src="assets/locations/desktop/image-map-australia.png"
+                  alt="location map australia image "
+                />
+              </picture>
             </div>
           </div>
           <div class="locations__location">
             <div class="locations__location__content">
-              <h3 class="locations__location-country">United Kingdom</h3>
-              <div class="locations__location-contact"></div>
-              <div class="locations__location-contact__address">
-                <b class="locations__location-contact__address-line"
-                  >Designo UK Office</b
-                >
-                <p class="locations__location-contact__address-line">
-                  13 Colorado Way
-                </p>
-                <p class="locations__location-contact__address-line">
-                  Rhyd-y-fro SA8 9GA
-                </p>
-              </div>
-              <div class="locations__location-contact__phone">
-                <b class="locations__location-contact__phone-line">Contact</b>
-                <p class="locations__location-contact__phone-line">
-                  P : 078 3115 1400
-                </p>
-                <p class="locations__location-contact__phone-line">
-                  M : contact@designo.uk
-                </p>
+              <h2 class="locations__location-country">United Kingdom</h2>
+              <div class="locations__location-contact">
+                <div class="locations__location-contact__address">
+                  <b class="locations__location-contact__address-line"
+                    >Designo UK Office</b
+                  >
+                  <p class="locations__location-contact__address-line">
+                    13 Colorado Way
+                  </p>
+                  <p class="locations__location-contact__address-line">
+                    Rhyd-y-fro SA8 9GA
+                  </p>
+                </div>
+                <div class="locations__location-contact__phone">
+                  <b class="locations__location-contact__phone-line">Contact</b>
+                  <p class="locations__location-contact__phone-line">
+                    P : 078 3115 1400
+                  </p>
+                  <p class="locations__location-contact__phone-line">
+                    M : contact@designo.uk
+                  </p>
+                </div>
               </div>
             </div>
             <div class="locations__location__map">
-              <img
-                src="assets/locations/desktop/image-map-united-kingdom.png"
-                alt=" location map united kingdom image"
-              />
+              <picture>
+                <source
+                  media="(max-width:1024px) and (min-width:500px)"
+                  srcset="/assets/locations/tablet/image-map-uk.png"
+                />
+                <img
+                  src="assets/locations/desktop/image-map-united-kingdom.png"
+                  alt=" location map united kingdom image"
+                />
+              </picture>
             </div>
           </div>
         </div>

@@ -48,3 +48,5 @@ barba.init({
     }
   ]
 });
+
+// TODO - make that it scroll to top on pages transition
