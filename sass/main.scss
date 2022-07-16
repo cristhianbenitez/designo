@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 // Vendors
-@import 'vendors/normalize', 'vendors/include-media';
+@import 'vendors/normalize', 'vendors/include-media',
+  'vendors/locomotive-scroll';
 
 //  Configuration and helpers
 @import 'abstracts/variables', 'abstracts/functions', 'abstracts/mixins';
