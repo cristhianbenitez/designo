@@ -75,12 +75,6 @@ barba.init({
       beforeEnter() {
         const tl = gsap.timeline({});
         tl.from('.our-locations__list-item', {
-          scrollTrigger: {
-            trigger: '.our-locations',
-            scroller: locoScroller,
-            end: 'start center',
-            scrub: true
-          },
           opacity: 0,
           duration: 1,
           x: -8000,
@@ -125,19 +119,10 @@ ScrollTrigger.scrollerProxy(locoScroller, {
 // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
 ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
 
-// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-ScrollTrigger.refresh();
-
 const footerAnimation = () => {
   const tl = gsap.timeline({});
 
   tl.from('.cta__inner-container', {
-    scrollTrigger: {
-      trigger: '.cta',
-      scroller: locoScroller,
-      end: 'center center',
-      scrub: true
-    },
     opacity: 0,
     duration: 1,
     y: -100
@@ -165,25 +150,17 @@ const homepageAnimation = () => {
     '-=1.5'
   );
 
-  tl.from('.categories', {
-    scrollTrigger: {
-      trigger: '.categories',
-      end: 'center center',
-      scroller: locoScroller,
-      scrub: true
+  tl.from(
+    '.categories',
+    {
+      opacity: 0,
+      duration: 0.5,
+      y: 300
     },
-    opacity: 0,
-    duration: 1,
-    y: 300
-  });
+    '-=1'
+  );
 
   tl.from('.our-process__item', {
-    scrollTrigger: {
-      trigger: '.our-process',
-      scroller: locoScroller,
-      end: 'center center',
-      scrub: true
-    },
     opacity: 0,
     duration: 1,
     x: 500,
@@ -205,24 +182,12 @@ const aboutUsAnimation = () => {
   });
 
   tl.from('.our-team__inner-container', {
-    scrollTrigger: {
-      trigger: '.our-team',
-      end: 'center center',
-      scroller: locoScroller,
-      scrub: true
-    },
     opacity: 0,
     duration: 1,
     y: 300
   });
 
   tl.from('.our-locations__list-item', {
-    scrollTrigger: {
-      trigger: '.our-locations',
-      scroller: locoScroller,
-      end: 'start center',
-      scrub: true
-    },
     opacity: 0,
     duration: 1,
     x: -500,
@@ -230,13 +195,6 @@ const aboutUsAnimation = () => {
   });
 
   tl.from('.our-mission__inner-container', {
-    scrollTrigger: {
-      trigger: '.our-mission',
-      start: 'center bottom',
-      end: 'bottom center',
-      scroller: locoScroller,
-      scrub: true
-    },
     opacity: 0,
     duration: 1,
     y: -200
