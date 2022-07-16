@@ -20,10 +20,6 @@ $(menuBtn).on('click', () => {
 
 // Hide background image when image not big enough
 
-if ($(window).width() < 768) {
-  console.log('object');
-}
-
 // Barba Transition
 barba.init({
   transitions: [
@@ -42,6 +38,8 @@ barba.init({
             $(link).removeClass(activeClass);
           }
         });
+
+        checkBackgroundImage();
       },
       leave(data) {
         return gsap.to(data.current.container, {
@@ -60,8 +58,7 @@ barba.init({
       namespace: 'home',
       beforeEnter() {
         initHomepageAnimation();
-      },
-      afterEnter() {}
+      }
     }
   ]
 });
