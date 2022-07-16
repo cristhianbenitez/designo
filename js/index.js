@@ -234,7 +234,6 @@ const aboutUsAnimation = () => {
       trigger: '.our-mission',
       start: 'center bottom',
       end: 'bottom center',
-      markers: true,
       scroller: locoScroller,
       scrub: true
     },
