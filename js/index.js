@@ -55,7 +55,19 @@ barba.init({
     {
       namespace: 'home',
       beforeEnter() {
-        initHomepageAnimation();
+        homepageAnimation();
+      }
+    },
+    {
+      namespace: 'about',
+      beforeEnter() {
+        aboutUsAnimation();
+      }
+    },
+    {
+      namespace: 'locations',
+      beforeEnter() {
+        locationsAnimation();
       }
     }
   ]
@@ -98,7 +110,7 @@ ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
 // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 ScrollTrigger.refresh();
 
-const initHomepageAnimation = () => {
+const homepageAnimation = () => {
   let tl = gsap.timeline({});
 
   tl.from('.hero__headline, .hero__copy, .hero__button', {
@@ -118,7 +130,7 @@ const initHomepageAnimation = () => {
     '-=1.5'
   );
 
-  gsap.from('.categories', {
+  tl.from('.categories', {
     scrollTrigger: {
       trigger: '.categories',
       end: 'center center',
@@ -130,7 +142,7 @@ const initHomepageAnimation = () => {
     y: 300
   });
 
-  gsap.from('.our-process__item', {
+  tl.from('.our-process__item', {
     scrollTrigger: {
       trigger: '.our-process',
       scroller: locoScroller,
@@ -142,4 +154,76 @@ const initHomepageAnimation = () => {
     x: 500,
     stagger: 0.5
   });
+};
+
+const aboutUsAnimation = () => {
+  const tl = gsap.timeline({});
+
+  tl.from('.about-hero', {
+    duration: 0.5,
+    y: 9999
+  });
+  tl.from('.about-hero__headline, .about-hero__copy, .about-hero__button', {
+    duration: 0.5,
+    y: 9999,
+    stagger: 0.5
+  });
+
+  tl.from('.our-team__inner-container', {
+    scrollTrigger: {
+      trigger: '.our-team',
+      end: 'center center',
+      scroller: locoScroller,
+      scrub: true
+    },
+    opacity: 0,
+    duration: 1,
+    y: 300
+  });
+
+  tl.from('.our-locations__list-item', {
+    scrollTrigger: {
+      trigger: '.our-locations',
+      scroller: locoScroller,
+      end: 'start center',
+      scrub: true
+    },
+    opacity: 0,
+    duration: 1,
+    x: -500,
+    stagger: 0.5
+  });
+
+  tl.from('.our-mission__inner-container', {
+    scrollTrigger: {
+      trigger: '.our-mission',
+      start: 'center bottom',
+      end: 'bottom center',
+      markers: true,
+      scroller: locoScroller,
+      scrub: true
+    },
+    opacity: 0,
+    duration: 1,
+    y: -200
+  });
+};
+
+const locationsAnimation = () => {
+  const tl = gsap.timeline({});
+
+  tl.from('.locations__location:first-child, .locations__location:last-child', {
+    opacity: 0,
+    duration: 2,
+    x: 300
+  });
+  tl.from(
+    '.locations__location:nth-child(2)',
+    {
+      opacity: 0,
+      duration: 2,
+      x: -300
+    },
+    '-=2'
+  );
 };
