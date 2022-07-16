@@ -1753,6 +1753,199 @@ h3 {
   text-decoration: none;
 }
 
+.contact-us {
+  background: #e7816b;
+  background-image: url(/assets/about/mobile/bg-pattern-hero-about-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 0%;
+  margin-bottom: 7.5rem;
+}
+
+@media (min-width: 768px) {
+  .contact-us {
+    background: none;
+  }
+}
+
+.contact-us__inner-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 4.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .contact-us__inner-container {
+    background: #e7816b;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-image: url(/assets/about/desktop/bg-pattern-hero-about-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: -100% -150%;
+    padding-inline: 3.6rem;
+  }
+}
+
+@media (min-width: 1040px) {
+  .contact-us__inner-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-align: left;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-size: 640px;
+    background-position: bottom left;
+    padding: 3.5rem 6rem;
+  }
+}
+
+.contact-us__copy {
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .contact-us__copy {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1040px) {
+  .contact-us__copy {
+    max-width: 446px;
+  }
+}
+
+.contact-us__headline {
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+.contact-us__body {
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+.contact-us__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .contact-us__form {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+@media (min-width: 1040px) {
+  .contact-us__form {
+    max-width: 380px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+.contact-us__form input,
+.contact-us__form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  resize: none;
+}
+
+.contact-us__form input::-webkit-input-placeholder,
+.contact-us__form textarea::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.contact-us__form input:-ms-input-placeholder,
+.contact-us__form textarea:-ms-input-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.contact-us__form input::-ms-input-placeholder,
+.contact-us__form textarea::-ms-input-placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.contact-us__form input::placeholder,
+.contact-us__form textarea::placeholder {
+  color: white;
+  opacity: 0.5;
+}
+
+.contact-us__form input:-webkit-autofill,
+.contact-us__form textarea:-webkit-autofill {
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+  color: white !important;
+}
+
+.contact-us__form input:hover, .contact-us__form input:active, .contact-us__form input:focus,
+.contact-us__form textarea:hover,
+.contact-us__form textarea:active,
+.contact-us__form textarea:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+}
+
+.contact-us__form button {
+  margin-top: 2rem;
+  border: none;
+  display: block;
+  padding: 1.125rem;
+  background: white;
+  border-radius: 0.5rem;
+  color: #1d1c1e;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  -webkit-transition: 0.3s cubic-bezier(0.12, 0, 0.39, 0);
+  transition: 0.3s cubic-bezier(0.12, 0, 0.39, 0);
+  padding-inline: 3rem;
+}
+
+.contact-us__form button:hover, .contact-us__form button:focus {
+  background: #ffad9b;
+  text-decoration: none;
+  color: white;
+}
+
 .locations {
   margin-bottom: 7.5rem;
 }

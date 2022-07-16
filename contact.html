@@ -62,15 +62,22 @@
               </p>
             </div>
             <form action="" class="contact-us__form">
-              <input type="text" name="name" placeholder="Name" />
-              <input type="email" name="email" placeholder="Email Address" />
+              <input type="text" name="name" placeholder="Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required
+              />
               <input type="tel" name="tel" placeholder="Phone" />
               <textarea
                 name="message"
-                cols="30"
-                rows="10"
+                rows="5"
                 placeholder="Your Message"
+                required
               ></textarea>
+
+              <button type="submit">Submit</button>
             </form>
           </div>
         </div>

@@ -24,6 +24,8 @@ barba.init({
     {
       name: 'default-transition',
       beforeEnter({ current, next, trigger }) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
         const headerLinks = $('.header__navigation__list-item');
         const href = next.url.path;
         const activeClass = 'header__navigation__list-item--active';
