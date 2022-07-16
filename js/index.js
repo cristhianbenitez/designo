@@ -38,8 +38,6 @@ barba.init({
             $(link).removeClass(activeClass);
           }
         });
-
-        checkBackgroundImage();
       },
       leave(data) {
         return gsap.to(data.current.container, {
