@@ -69,6 +69,24 @@ barba.init({
       beforeEnter() {
         locationsAnimation();
       }
+    },
+    {
+      namespace: 'contact',
+      beforeEnter() {
+        const tl = gsap.timeline({});
+        tl.from('.our-locations__list-item', {
+          scrollTrigger: {
+            trigger: '.our-locations',
+            scroller: locoScroller,
+            end: 'start center',
+            scrub: true
+          },
+          opacity: 0,
+          duration: 1,
+          x: -8000,
+          stagger: 0.5
+        });
+      }
     }
   ]
 });
@@ -109,6 +127,23 @@ ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
 
 // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
 ScrollTrigger.refresh();
+
+const footerAnimation = () => {
+  const tl = gsap.timeline({});
+
+  tl.from('.cta__inner-container', {
+    scrollTrigger: {
+      trigger: '.cta',
+      scroller: locoScroller,
+      end: 'center center',
+      scrub: true
+    },
+    opacity: 0,
+    duration: 1,
+    y: -100
+  });
+};
+footerAnimation();
 
 const homepageAnimation = () => {
   let tl = gsap.timeline({});
